@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mariage de Hamdi & Sawsen | 19 - 21 Août</title>
+    <meta name="description" content="Site officiel du mariage de Hamdi & Sawsen. Rejoignez-nous pour célébrer notre union du 19 au 21 Août à Dream Parc et Zaouiet Djedidi.">
+    
+    <!-- Open Graph for WhatsApp & Social Media Preview -->
+    <meta property="og:title" content="💍 Mariage de Hamdi & Sawsen | 19 • 20 • 21 Août">
+    <meta property="og:description" content="Découvrez le programme officiel et les lieux des cérémonies du mariage de Hamdi & Sawsen (A9ed l 9iran, Soirée Hina & Grand Mariage à Dream Park).">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1200&q=80">
+    <meta property="og:type" content="website">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cinzel:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Amiri:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Canvas Confetti -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Floating Audio Control -->
+    <div class="music-controller" id="musicToggle" title="Activer / Désactiver la musique">
+        <i class="fa-solid fa-music"></i>
+        <span class="music-wave"></span>
+        <span class="music-wave"></span>
+        <span class="music-wave"></span>
+    </div>
+
+    <!-- Navigation Header -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">H <i class="fa-solid fa-heart heart-icon"></i> S</a>
+            <ul class="nav-links">
+                <li><a href="#about">Notre Histoire</a></li>
+                <li><a href="#program">Programme</a></li>
+                <li><a href="#locations">Lieux</a></li>
+                <li><a href="index-light.html" class="theme-switch-btn" title="Basculer vers le thème clair"><i class="fa-solid fa-sun"></i> Version Claire</a></li>
+            </ul>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Drawer Menu -->
+    <div class="mobile-drawer" id="mobileDrawer">
+        <button class="close-drawer" id="closeDrawer"><i class="fa-solid fa-xmark"></i></button>
+        <ul class="mobile-links">
+            <li><a href="#hero" class="m-link">Accueil</a></li>
+            <li><a href="#about" class="m-link">Notre Histoire</a></li>
+            <li><a href="#program" class="m-link">Programme</a></li>
+            <li><a href="#locations" class="m-link">Lieux</a></li>
+        </ul>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <span class="bismillah">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</span>
+            <div class="monogram">
+                <span>H</span>
+                <i class="fa-solid fa-ring"></i>
+                <span>S</span>
+            </div>
+            <p class="subtitle-top">Nous avons la joie de vous annoncer le mariage de</p>
+            <h1 class="couple-names">Hamdi <span class="ampersand">&amp;</span> Sawsen</h1>
+            <p class="arabic-quote">"وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَاجًا لِّتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةً"</p>
+            
+            <div class="wedding-dates-badge">
+                <i class="fa-solid fa-calendar-check"></i> 19 • 20 • 21 AOÛT
+            </div>
+
+            <!-- Countdown Timer -->
+            <div class="countdown-container" id="countdown">
+                <div class="count-box">
+                    <span class="number" id="days">00</span>
+                    <span class="label">Jours</span>
+                </div>
+                <div class="count-separator">:</div>
+                <div class="count-box">
+                    <span class="number" id="hours">00</span>
+                    <span class="label">Heures</span>
+                </div>
+                <div class="count-separator">:</div>
+                <div class="count-box">
+                    <span class="number" id="minutes">00</span>
+                    <span class="label">Minutes</span>
+                </div>
+                <div class="count-separator">:</div>
+                <div class="count-box">
+                    <span class="number" id="seconds">00</span>
+                    <span class="label">Secondes</span>
+                </div>
+            </div>
+
+            <div class="hero-cta-buttons">
+                <a href="#program" class="btn btn-primary"><i class="fa-solid fa-calendar-days"></i> Découvrir le programme</a>
+                <a href="#locations" class="btn btn-outline"><i class="fa-solid fa-map-location-dot"></i> Lieux des cérémonies</a>
+            </div>
+        </div>
+        <a href="#about" class="scroll-down-indicator">
+            <i class="fa-solid fa-chevron-down"></i>
+        </a>
+    </section>
+
+    <!-- Couple Intro Section -->
+    <section class="section about-section" id="about">
+        <div class="container">
+            <div class="section-title text-center">
+                <span class="section-badge">Notre Amour</span>
+                <h2>Deux Cœurs, Une Histoire</h2>
+                <div class="divider"><i class="fa-solid fa-heart"></i></div>
+            </div>
+
+            <div class="about-grid">
+                <div class="about-card groom-card">
+                    <div class="card-avatar">
+                        <i class="fa-solid fa-user-tie"></i>
+                    </div>
+                    <h3>Hamdi</h3>
+                    <p class="role">Le Marié</p>
+                    <p class="description">"Chaque instant passé à tes côtés transforme notre monde en une aventure magique. Hâte de commencer notre plus beau chapitre."</p>
+                </div>
+
+                <div class="heart-center-icon">
+                    <div class="pulse-ring"></div>
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+
+                <div class="about-card bride-card">
+                    <div class="card-avatar">
+                        <i class="fa-solid fa-crown"></i>
+                    </div>
+                    <h3>Sawsen</h3>
+                    <p class="role">La Mariée</p>
+                    <p class="description">"Ton amour est mon refuge et ma plus belle bénédiction. Ensemble pour toujours, main dans la main."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Program / Timeline Section -->
+    <section class="section program-section" id="program">
+        <div class="container">
+            <div class="section-title text-center">
+                <span class="section-badge">Programme Féerique</span>
+                <h2>Les Étapes de Notre Célébration</h2>
+                <p class="section-intro">Trois jours inoubliables remplis de joie, de traditions et d'amour.</p>
+                <div class="divider"><i class="fa-solid fa-gem"></i></div>
+            </div>
+
+            <div class="timeline">
+                <!-- Day 1: 19 Août -->
+                <div class="timeline-item">
+                    <div class="timeline-badge">
+                        <span class="day-num">19</span>
+                        <span class="day-month">AOÛT</span>
+                    </div>
+                    <div class="timeline-card">
+                        <div class="card-header">
+                            <span class="event-type"><i class="fa-solid fa-scroll"></i> Cérémonie Officielle</span>
+                            <span class="arabic-tag">عقد القران</span>
+                        </div>
+                        <h3>A9ed El 9iran (عقد القران)</h3>
+                        <p class="event-desc">Signature du contrat de mariage et bénédiction solennelle entourés de la famille et des proches à Zaouiet Djedidi.</p>
+                        <div class="event-meta">
+                            <span><i class="fa-regular fa-clock"></i> En Journée</span>
+                            <span><i class="fa-solid fa-location-dot"></i> JH4G+GWQ, Zaouiet Djedidi</span>
+                        </div>
+                        <a href="https://www.google.com/maps/search/?api=1&query=JH4G%2BGWQ+Zaouiet+Djedidi" target="_blank" class="timeline-btn">
+                            <i class="fa-solid fa-map-pin"></i> Voir la localisation (Zaouiet Djedidi)
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Day 2: 20 Août -->
+                <div class="timeline-item timeline-inverted">
+                    <div class="timeline-badge badge-gold">
+                        <span class="day-num">20</span>
+                        <span class="day-month">AOÛT</span>
+                    </div>
+                    <div class="timeline-card">
+                        <div class="card-header">
+                            <span class="event-type"><i class="fa-solid fa-music"></i> Soirée de Hina</span>
+                            <span class="arabic-tag">سهرة الحنة / Maison Hamdi</span>
+                        </div>
+                        <h3>Soirée de Hina (Maison de Hamdi)</h3>
+                        <p class="event-desc">Une soirée festonnée de Henna et d'ambiance traditionnelle tunisienne chez le marié à Zaouiet Djedidi.</p>
+                        <div class="event-meta">
+                            <span><i class="fa-regular fa-clock"></i> À partir de 20h00</span>
+                            <span><i class="fa-solid fa-house-chimney-heart"></i> JH54+G9R, Zaouiet Djedidi</span>
+                        </div>
+                        <a href="https://www.google.com/maps/search/?api=1&query=JH54%2BG9R+Zaouiet+Djedidi" target="_blank" class="timeline-btn">
+                            <i class="fa-solid fa-map-pin"></i> Localiser la maison de Hamdi
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Day 3: 21 Août -->
+                <div class="timeline-item">
+                    <div class="timeline-badge badge-royal">
+                        <span class="day-num">21</span>
+                        <span class="day-month">AOÛT</span>
+                    </div>
+                    <div class="timeline-card highlight-card">
+                        <div class="grand-badge"><i class="fa-solid fa-crown"></i> Le Grand Jour</div>
+                        <div class="card-header">
+                            <span class="event-type"><i class="fa-solid fa-champagne-glasses"></i> Grande Réception</span>
+                            <span class="arabic-tag">حفل الزفاف الكبير</span>
+                        </div>
+                        <h3>Cérémonie du Grand Mariage</h3>
+                        <p class="event-desc">Le grand soir féerique où Hamdi et Sawsen célébreront leur amour lors d'une fête somptueuse à Dream Park.</p>
+                        <div class="event-meta">
+                            <span><i class="fa-regular fa-clock"></i> À partir de 19h30</span>
+                            <span><i class="fa-solid fa-location-dot"></i> Dream Park</span>
+                        </div>
+                        <a href="https://www.google.com/maps/place/Dream+Park/@36.6188472,10.535894,559m/data=!3m2!1e3!4b1!4m6!3m5!1s0x12fd59830ea31651:0x7959234fb5c44d86!8m2!3d36.6188472!4d10.5384743!16s%2Fg%2F1hg4s3y4k" target="_blank" class="timeline-btn">
+                            <i class="fa-solid fa-map-pin"></i> Itinéraire Google Maps Dream Park
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Locations Section -->
+    <section class="section locations-section" id="locations">
+        <div class="container">
+            <div class="section-title text-center">
+                <span class="section-badge">Emplacements Précis</span>
+                <h2>Où se déroulent les cérémonies ?</h2>
+                <div class="divider"><i class="fa-solid fa-compass"></i></div>
+            </div>
+
+            <div class="locations-grid">
+                <!-- Location 1: A9ed El 9iran (19 Août) -->
+                <div class="location-card">
+                    <div class="location-image a9ed-img">
+                        <div class="location-overlay">
+                            <span class="date-chip">19 AOÛT</span>
+                        </div>
+                    </div>
+                    <div class="location-body">
+                        <h3><i class="fa-solid fa-scroll"></i> A9ed El 9iran (عقد القران)</h3>
+                        <p class="location-subtitle">Signature du contrat de mariage</p>
+                        <p class="location-desc">Cérémonie solennelle et bénédiction familiale réunissant les proches pour le contrat du mariage.</p>
+                        <ul class="location-features">
+                            <li><i class="fa-solid fa-location-dot"></i> Plus Code: <strong>JH4G+GWQ</strong></li>
+                            <li><i class="fa-solid fa-city"></i> Zaouiet Djedidi</li>
+                        </ul>
+                        <div class="location-actions">
+                            <a href="https://www.google.com/maps/search/?api=1&query=JH4G%2BGWQ+Zaouiet+Djedidi" target="_blank" class="btn btn-secondary">
+                                <i class="fa-solid fa-map-location-dot"></i> Itinéraire (JH4G+GWQ)
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Location 2: Soirée de Hina (20 Août) -->
+                <div class="location-card">
+                    <div class="location-image hamdi-house-img">
+                        <div class="location-overlay">
+                            <span class="date-chip">20 AOÛT</span>
+                        </div>
+                    </div>
+                    <div class="location-body">
+                        <h3><i class="fa-solid fa-house-user"></i> Soirée de Hina</h3>
+                        <p class="location-subtitle">Maison de Hamdi - Veille du mariage</p>
+                        <p class="location-desc">Ambiance festive avec musique traditionnelle tunisienne et hénné à la maison du marié.</p>
+                        <ul class="location-features">
+                            <li><i class="fa-solid fa-location-dot"></i> Plus Code: <strong>JH54+G9R</strong></li>
+                            <li><i class="fa-solid fa-city"></i> Zaouiet Djedidi</li>
+                        </ul>
+                        <div class="location-actions">
+                            <a href="https://www.google.com/maps/search/?api=1&query=JH54%2BG9R+Zaouiet+Djedidi" target="_blank" class="btn btn-secondary">
+                                <i class="fa-solid fa-location-arrow"></i> Itinéraire (JH54+G9R)
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Location 3: Dream Parc (21 Août) -->
+                <div class="location-card" id="location-dreamparc">
+                    <div class="location-image dreamparc-img">
+                        <div class="location-overlay">
+                            <span class="date-chip">21 AOÛT</span>
+                        </div>
+                    </div>
+                    <div class="location-body">
+                        <h3><i class="fa-solid fa-synagogue"></i> Dream Park</h3>
+                        <p class="location-subtitle">Grand Mariage & Réception</p>
+                        <p class="location-desc">Un cadre somptueux et magique préparé spécialement pour vous offrir une soirée inoubliable.</p>
+                        <ul class="location-features">
+                            <li><i class="fa-solid fa-parking"></i> Grand parking & salle climatisée</li>
+                            <li><i class="fa-solid fa-wand-magic-sparkles"></i> Ambiance féerique & orchestre</li>
+                        </ul>
+                        <div class="location-actions">
+                            <a href="https://www.google.com/maps/place/Dream+Park/@36.6188472,10.535894,559m/data=!3m2!1e3!4b1!4m6!3m5!1s0x12fd59830ea31651:0x7959234fb5c44d86!8m2!3d36.6188472!4d10.5384743!16s%2Fg%2F1hg4s3y4k" target="_blank" class="btn btn-secondary">
+                                <i class="fa-solid fa-map-location-dot"></i> Itinéraire Dream Park
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container text-center">
+            <div class="footer-monogram">H & S</div>
+            <h3>Hamdi & Sawsen</h3>
+            <p class="footer-dates">19 • 20 • 21 Août</p>
+            <p class="footer-msg">Nous sommes impatients de célébrer avec vous !</p>
+            <div class="footer-hearts">
+                <i class="fa-solid fa-heart"></i>
+                <i class="fa-solid fa-heart"></i>
+                <i class="fa-solid fa-heart"></i>
+            </div>
+            <p class="copyright">&copy; 2026 Plateforme de Mariage Hamdi & Sawsen</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
